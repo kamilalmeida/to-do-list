@@ -22,6 +22,13 @@ function createItem(item, index) {
 function updateScreen() {
   document.querySelector(".list").innerHTML = "";
   toDoList.forEach((item, index) => createItem(item, index));
+
+  if (toDoList.length > 0) {
+    console.log("if");
+    document.querySelector(".warning").classList.add("disabled");
+  } else {
+    document.querySelector(".warning").classList.remove("disabled");
+  }
 }
 
 function insertItem() {
@@ -30,10 +37,6 @@ function insertItem() {
     toDoList.push(dataInput);
     updateScreen();
     clearForm();
-  }
-
-  if (toDoList.length != 0) {
-    const paragraph = document.querySelector(".active").classList.add("disable");
   }
 }
 
@@ -48,12 +51,5 @@ function deleteItem(event) {
   toDoList.splice(index, 1);
   itemToBeDelete.remove();
 
-  if (toDoList.length === 0) {
-    const paragraph = document.querySelector(".active").classList.add("actived");
-
-    console.log(toDoList.length === 0);
-  } else {
-    const paragraph = document.querySelector(".active").classList.add("disable");
-  }
   updateScreen();
 }

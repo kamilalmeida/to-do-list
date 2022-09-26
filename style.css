@@ -149,14 +149,13 @@ label {
   height: 34px;
   margin-right: 8px;
   background-color: transparent;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.delete:hover {
-  background: #03e9f4;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+.delete:hover{
+  background: #03e9f485;
+  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
   margin-right: 15px;
- 
 }
 
 button.delete svg path {
@@ -170,15 +169,12 @@ button.add:hover path {
   opacity: 0.6;
 }
 
-.active {
+.warning {
   padding-left: 60px;
 }
 
-.disable {
+.disabled {
   display: none;
-}
-.actived {
-  display: block;
 }
 
 /* button */
@@ -197,12 +193,12 @@ button.add:hover path {
   letter-spacing: 2px;
 }
 
-.user-box a:hover {
+.user-box a:hover{
   margin-left: 20px;
-  background: #03e9f4;
+  background: #03e9f485;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
 }
 
 .user-box a span {
