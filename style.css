@@ -150,12 +150,13 @@ label {
   margin-right: 8px;
   background-color: transparent;
   transition: 0.5s;
+
+  margin-left: 15px;
 }
 
-.delete:hover{
+.delete:hover {
   background: #03e9f485;
   box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
-  margin-right: 15px;
 }
 
 button.delete svg path {
@@ -179,7 +180,7 @@ button.add:hover path {
 
 /* button */
 
-.user-box a {
+.user-box .animation {
   position: relative;
   display: inline-block;
   padding: 19px 20px;
@@ -193,7 +194,7 @@ button.add:hover path {
   letter-spacing: 2px;
 }
 
-.user-box a:hover{
+.user-box .animation:hover {
   margin-left: 20px;
   background: #03e9f485;
   color: #fff;
@@ -201,11 +202,11 @@ button.add:hover path {
   box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
 }
 
-.user-box a span {
+.user-box .animation span {
   position: absolute;
   display: block;
 }
-.user-box a span:nth-child(1) {
+.user-box .animation span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -226,7 +227,7 @@ button.add:hover path {
   }
 }
 
-.user-box a span:nth-child(2) {
+.user-box .animation span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -246,7 +247,7 @@ button.add:hover path {
     top: 100%;
   }
 }
-.user-box a span:nth-child(3) {
+.user-box .animation span:nth-child(3) {
   bottom: 0;
   right: 100%;
   width: 100%;
@@ -267,7 +268,7 @@ button.add:hover path {
   }
 }
 
-.user-box a span:nth-child(4) {
+.user-box .animation span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

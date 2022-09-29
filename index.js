@@ -6,7 +6,7 @@ function createItem(item, index) {
         
             <li data-index=${index}>
                 <div class="list" >
-                    <input class="checkbox" type="checkbox" id="checkbox"  >
+                    <input class="checkbox" type="checkbox" id="checkbox" class="checked" >
                 </div>
                 <label for="checkbox" >
                 ${item}
@@ -31,7 +31,8 @@ function updateScreen() {
   }
 }
 
-function insertItem() {
+function insertItem(event) {
+  event.preventDefault();
   const dataInput = document.getElementById("tasks").value;
   if (dataInput != "") {
     toDoList.push(dataInput);

@@ -33,17 +33,17 @@
             <h2>Criar nova tarefa</h2>
         </div>
         <section class="input">
-            <form>
+            <form onsubmit="insertItem(event)">
                 <input type="text" placeholder="Nome da tarefa" id="tasks">
-                <div class="user-box" onclick="insertItem()">
-                    <a href="#" type="button">
+                <button type="submit" class="user-box">
+                    <div class="animation">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         Adicionar
-                    </a>
-                </div>
+                    </div>
+                </button>
             </form>
         </section>
 
@@ -68,7 +68,6 @@
         </ul>
         <p class="warning">Você não tem tarefas disponíveis</p>
     </main>
-
     <section class="">
 
     </section>
