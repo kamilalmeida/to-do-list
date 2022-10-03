@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
-
+    <header>
+        <h1>To-Do-List</h1>
+    </header>
     <main>
-        <header>
-            <h1>To-Do-List</h1>
-        </header>
+
         <div class="title">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="39" height="39" rx="11.5" fill="url(#paint0_linear_6_785)" />
@@ -46,8 +47,41 @@
                 </button>
             </form>
         </section>
+        <!-- <section>
+            <form id="edit-form" class="hide">
+                <p>Edite sua tarefa</p>
+                <div class="form-control">
+                    <input type="text" id="edit-input" />
+                    <button type="submit">
+                        <i class="fa-solid fa-check-double"></i>
+                    </button>
+                </div>
+                <button id="cancel-edit-btn">Cancelar</button>
+            </form>
+        </section> -->
+        <section>
+            <div id="toolbar">
+                <div id="search">
+                    <h4>Pesquisar:</h4>
+                    <form>
+                        <input type="text" id="search-input" placeholder="Buscar..." />
+                        <button id="erase-button">
+                            <i class="fa-solid fa-delete-left"></i>
+                        </button>
+                    </form>
+                </div>
+                <div id="filter">
+                    <h4>Filtrar:</h4>
+                    <select id="filter-select">
+                        <option value="all">Todos</option>
+                        <option value="done">Feitos</option>
+                        <option value="todo">A fazer</option>
+                    </select>
+                </div>
+            </div>
+        </section>
 
-        <div class="sub-title">
+        <!-- <div class="sub-title">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="39" height="39" rx="11.5" fill="url(#paint0_linear_6_787)" />
                 <path
@@ -63,14 +97,14 @@
                 </defs>
             </svg>
             <h2>Tarefas de hoje</h2>
-        </div>
-        <ul class="list">
-        </ul>
-        <p class="warning">Você não tem tarefas disponíveis</p>
+        </div> -->
+        <form action="">
+            <ul class="list">
+            </ul>
+            <p class="warning">Você não tem tarefas a serem realizadas</p>
+        </form>
     </main>
-    <section class="">
 
-    </section>
 
     <script src="index.js"></script>
 </body>

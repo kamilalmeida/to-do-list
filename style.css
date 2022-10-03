@@ -7,18 +7,28 @@
 }
 
 body {
-  background: #000000e3;
+  width: 100%;
+  min-height: 100vh;
+  background: url(./img/background\.png) no-repeat center center/ cover;
+
   color: #ddd;
 }
 
 header {
   width: 100%;
   border-bottom: 1px solid #cffbf638;
-  padding: 20px 0 16px 0;
+  padding: 20px 0 16px 20px;
 }
 
 main {
-  padding: 20px 50px 0 50px;
+  background: #ffffff10;
+  border-radius: 20px;
+  border: 2px solid #ffffff30;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  width: 580px;
+  padding: 30px 50px 0 50px;
 
   flex-direction: column;
   display: flex;
@@ -40,6 +50,33 @@ div.sub-title {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#search-input {
+  width: 350px;
+  height: 50px;
+
+  margin-top: 10px;
+  margin-right: 10px;
+
+  font-size: 16px;
+
+  padding-left: 16px;
+
+  outline: none;
+  width: 350px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+#filter-select {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
 }
 
 h2 {
@@ -64,22 +101,22 @@ button {
 
   outline: none;
 
-  width: 464px;
-  height: 56px;
+  width: 350px;
+  height: 50px;
   border-radius: 5px;
 }
 
 ul {
   list-style: none;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 li {
   display: flex;
 
   justify-content: flex-start;
-  width: 520px;
-  height: 56px;
+  width: 350px;
+  height: 50px;
   background-color: #262c2cab;
   align-items: center;
 
@@ -88,8 +125,8 @@ li {
   padding-left: 10px;
 }
 
-label {
-  width: 443px;
+.list label {
+  width: 243px;
   padding-left: 10px;
 }
 
@@ -138,20 +175,24 @@ label {
 .checkbox:focus {
   box-shadow: 0 0 5px turquoise;
 }
-
+.fa-x::before{
+  content: "\f00d";
+}
 .delete {
   font-size: 20px;
 
+  background-color: transparent;
   box-shadow: 0 0 1px #03e9f4, 0 0 8px #03e9f4, 0 0 12px #03e9f4, 0 0 6px #03e9f4;
   border-radius: 8px;
   color: #fff;
-  width: 35px;
-  height: 34px;
-  margin-right: 8px;
-  background-color: transparent;
-  transition: 0.5s;
 
-  margin-left: 15px;
+  width: 26px;
+  height: 26px;
+
+  margin-right: 8px;
+  margin-left: 30px;
+
+  transition: 0.5s;
 }
 
 .delete:hover {
@@ -171,7 +212,8 @@ button.add:hover path {
 }
 
 .warning {
-  padding-left: 60px;
+  padding-left: 25px;
+  padding-bottom: 40px;
 }
 
 .disabled {
@@ -179,13 +221,15 @@ button.add:hover path {
 }
 
 /* button */
-
+.animation {
+  font-size: 30px;
+}
 .user-box .animation {
   position: relative;
   display: inline-block;
-  padding: 19px 20px;
+  padding: 15px 17px;
   color: #03e9f4;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -195,7 +239,7 @@ button.add:hover path {
 }
 
 .user-box .animation:hover {
-  margin-left: 20px;
+  margin-left: 10px;
   background: #03e9f485;
   color: #fff;
   border-radius: 5px;
@@ -287,4 +331,14 @@ button.add:hover path {
   100% {
     bottom: 100%;
   }
+}
+
+/* Checked */
+
+.done {
+  background: #03e9f46b;
+  border: 1px solid #03e9f4;
+  color: #fff;
+  text-decoration: line-through;
+  font-style: italic;
 }

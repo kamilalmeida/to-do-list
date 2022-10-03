@@ -3,8 +3,7 @@ const toDoList = [];
 function createItem(item, index) {
   const elementDiv = document.querySelector(".list");
   const elementList = `
-        
-            <li data-index=${index}>
+            <li data-index=${index}  >
                 <div class="list" >
                     <input class="checkbox" type="checkbox" id="checkbox" class="checked" >
                 </div>
@@ -12,7 +11,7 @@ function createItem(item, index) {
                 ${item}
                </label>
                 <button class="delete" type="button" onclick="deleteItem(event)">
-                    X
+                X
                 </button>
             </li>
           `;
@@ -24,7 +23,6 @@ function updateScreen() {
   toDoList.forEach((item, index) => createItem(item, index));
 
   if (toDoList.length > 0) {
-    console.log("if");
     document.querySelector(".warning").classList.add("disabled");
   } else {
     document.querySelector(".warning").classList.remove("disabled");
