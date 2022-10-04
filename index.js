@@ -63,3 +63,23 @@ function taskDone(e) {
 }
 
 document.addEventListener("click", taskDone);
+
+const getSearchedTodos = (search) => {
+  const todos = document.querySelectorAll(".item");
+
+  todos.forEach((todo) => {
+    const todoTitle = todo.querySelector("label").innerText.toLowerCase();
+    console.log(todoTitle);
+    todo.style.display = "flex";
+    if (!todoTitle.includes(search)) {
+      todo.style.display = "none";
+    }
+  });
+};
+
+const searchInput = document.querySelector("#search-input");
+searchInput.addEventListener("keyup", (e) => {
+  const search = e.target.value;
+
+  getSearchedTodos(search);
+});
