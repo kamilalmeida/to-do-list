@@ -175,14 +175,16 @@ li {
 .checkbox:focus {
   box-shadow: 0 0 5px turquoise;
 }
-.fa-x::before{
+.fa-x::before {
   content: "\f00d";
 }
+
 .delete {
   font-size: 20px;
 
   background-color: transparent;
-  box-shadow: 0 0 1px #03e9f4, 0 0 8px #03e9f4, 0 0 12px #03e9f4, 0 0 6px #03e9f4;
+  box-shadow: 0 0 1px #03e9f4, 0 0 8px #03e9f4, 0 0 12px #03e9f4,
+    0 0 6px #03e9f4;
   border-radius: 8px;
   color: #fff;
 
@@ -197,15 +199,20 @@ li {
 
 .deletes {
   background: #03e9f485;
-  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
+  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4,
+    0 0 9px #03e9f4;
 }
 
 button.delete svg path {
   transition: all 0.2s ease 0s;
 }
 
-button.delete:hover path {
-  fill: #ff364e;
+button.delete path {
+  fill: #fff;
+}
+
+.delete svg {
+  width: 15px;
 }
 button.add:hover path {
   opacity: 0.6;
@@ -243,7 +250,8 @@ button.add:hover path {
   background: #03e9f485;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
+  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4,
+    0 0 9px #03e9f4;
 }
 
 .user-box .animation span {
@@ -339,6 +347,7 @@ button.add:hover path {
   background: #03e9f46b;
   border: 1px solid #03e9f4;
   color: #fff;
-  text-decoration: line-through;
+  text-decoration: line-through ;
+
   font-style: italic;
 }

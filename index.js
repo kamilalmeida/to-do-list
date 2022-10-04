@@ -3,7 +3,7 @@ const toDoList = [];
 function createItem(item, index) {
   const elementDiv = document.querySelector(".list");
   const elementList = `
-            <li data-index=${index}  >
+            <li data-index=${index} class="item" >
                 <div class="list" >
                     <input class="checkbox" type="checkbox" id="checkbox" class="checked" >
                 </div>
@@ -11,7 +11,7 @@ function createItem(item, index) {
                 ${item}
                </label>
                 <button class="delete" type="button" onclick="deleteItem(event)">
-                X
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M294.6 166.6L317.3 144 272 98.7l-22.6 22.6L160 210.7 70.6 121.4 48 98.7 2.7 144l22.6 22.6L114.7 256 25.4 345.4 2.7 368 48 413.3l22.6-22.6L160 301.3l89.4 89.4L272 413.3 317.3 368l-22.6-22.6L205.3 256l89.4-89.4z"/></svg>
                 </button>
             </li>
           `;
@@ -45,6 +45,7 @@ function clearForm() {
 
 function deleteItem(event) {
   const itemToBeDelete = event.currentTarget.parentNode;
+  console.log(event.target);
   const index = itemToBeDelete.dataset.index;
 
   toDoList.splice(index, 1);
@@ -52,3 +53,13 @@ function deleteItem(event) {
 
   updateScreen();
 }
+
+function taskDone(e) {
+  const targetEl = e.target;
+  const parentEl = targetEl.closest("li");
+  if (targetEl.type === "checkbox") {
+    parentEl.classList.toggle("done");
+  }
+}
+
+document.addEventListener("click", taskDone);
