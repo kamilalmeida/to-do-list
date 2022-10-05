@@ -245,7 +245,7 @@ button.add:hover path {
   letter-spacing: 2px;
 }
 
-.user-box .animation {
+.user-box .animation:hover {
   margin-left: 10px;
   background: #03e9f485;
   color: #fff;

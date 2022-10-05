@@ -64,7 +64,7 @@ function taskDone(e) {
 
 document.addEventListener("click", taskDone);
 
-const getSearchedTodos = (search) => {
+function getSearchedTodos(search) {
   const todos = document.querySelectorAll(".item");
 
   todos.forEach((todo) => {
@@ -72,10 +72,11 @@ const getSearchedTodos = (search) => {
     console.log(todoTitle);
     todo.style.display = "flex";
     if (!todoTitle.includes(search)) {
+      console.log("oi");
       todo.style.display = "none";
     }
   });
-};
+}
 
 const searchInput = document.querySelector("#search-input");
 searchInput.addEventListener("keyup", (e) => {
@@ -83,3 +84,52 @@ searchInput.addEventListener("keyup", (e) => {
 
   getSearchedTodos(search);
 });
+
+function filterTodos(filterValue) {
+  const todos = document.querySelectorAll(".item");
+  console.log(todos);
+  switch (filterValue) {
+    case "all":
+      todos.forEach((todo) => (todo.style.display = "flex"));
+
+      break;
+
+    case "done":
+      todos.forEach((todo) =>
+        todo.classList.contains("done")
+          ? (todo.style.display = "flex")
+          : (todo.style.display = "none")
+      );
+
+      break;
+
+    case "todo":
+      todos.forEach((todo) =>
+        !todo.classList.contains("done")
+          ? (todo.style.display = "flex")
+          : (todo.style.display = "none")
+      );
+
+      break;
+
+    default:
+      break;
+  }
+}
+
+const filterBtn = document.querySelector("#filter-select");
+
+filterBtn.addEventListener("change", (e) => {
+  const filterValue = e.target.value;
+
+  filterTodos(filterValue);
+});
+
+function getTodosLocalStorage() {
+  const toDoList = JSON.stringify(localStorage.getItem("todo")) ?? [];
+  console.log(toDoList);
+}
+
+function saveLocalStorage(toDoList) {
+  localStorage.setItem("todo", toDoList);
+}
