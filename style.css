@@ -183,8 +183,7 @@ li {
   font-size: 20px;
 
   background-color: transparent;
-  box-shadow: 0 0 1px #03e9f4, 0 0 8px #03e9f4, 0 0 12px #03e9f4,
-    0 0 6px #03e9f4;
+  box-shadow: 0 0 1px #03e9f4, 0 0 8px #03e9f4, 0 0 12px #03e9f4, 0 0 6px #03e9f4;
   border-radius: 8px;
   color: #fff;
 
@@ -195,12 +194,14 @@ li {
   margin-left: 30px;
 
   transition: 0.5s;
+
+  text-decoration: none;
+
 }
 
 .deletes {
   background: #03e9f485;
-  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4,
-    0 0 9px #03e9f4;
+  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
 }
 
 button.delete svg path {
@@ -212,7 +213,7 @@ button.delete path {
 }
 
 .delete svg {
-  width: 15px;
+  width: 13px;
 }
 button.add:hover path {
   opacity: 0.6;
@@ -250,8 +251,7 @@ button.add:hover path {
   background: #03e9f485;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4,
-    0 0 9px #03e9f4;
+  box-shadow: 0 0 16px #03e9f4, 0 0 4px #03e9f4, 0 0 5px #03e9f4, 0 0 9px #03e9f4;
 }
 
 .user-box .animation span {
@@ -347,7 +347,7 @@ button.add:hover path {
   background: #03e9f46b;
   border: 1px solid #03e9f4;
   color: #fff;
-  text-decoration: line-through ;
+  text-decoration: line-through;
 
   font-style: italic;
 }
