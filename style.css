@@ -196,7 +196,6 @@ li {
   transition: 0.5s;
 
   text-decoration: none;
-
 }
 
 .deletes {
@@ -344,10 +343,13 @@ button.add:hover path {
 /* Checked */
 
 .done {
-  background: #03e9f46b;
   border: 1px solid #03e9f4;
   color: #fff;
   text-decoration: line-through;
 
   font-style: italic;
+}
+
+.no-select {
+  pointer-events: none;
 }
