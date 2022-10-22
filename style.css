@@ -443,7 +443,6 @@ button.add:hover path {
   main {
     width: min(31rem, 100%);
     padding: 30px 38px 0 30px;
-    /* background-color: #fff; */
   }
   .user-box .animation {
     width: 83px;
@@ -491,7 +490,120 @@ button.add:hover path {
     height: 30px;
   }
 
-  li{
-    font-size: .6em;
+  li {
+    font-size: 0.6em;
+  }
+}
+
+/* animation moon */
+
+@keyframes cresent {
+  0% {
+    transform: translate(-30px, 30px) scale(0.9);
+    box-shadow: none;
+  }
+  50% {
+    transform: translate(0px, 0px) scale(1.02);
+    box-shadow: 0 0 10px lighten(--moon, 30%), 0 0 80px 8px --moon;
+    background-color: --peak;
+  }
+  100% {
+    transform: translate(30px, -30px) scale(0.9);
+    box-shadow: none;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  --background: #182c51;
+  --moon: #c7938b;
+  --peak: #efdbd8;
+  --mobile: 768px;
+}
+
+.moon {
+  background-image: linear-gradient(30deg, darken(--background, 4.6%), darken(--background, 8.3%));
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  position: relative;
+}
+.moon::before {
+  content: "";
+  background-color: var(--moon);
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  animation: 3.2s cresent linear infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .moon {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/*  */
+
+@keyframes cresent {
+  0% {
+    transform: translate(-30px, 30px) scale(0.9);
+    box-shadow: none;
+  }
+  50% {
+    transform: translate(0px, 0px) scale(1.02);
+    box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #c7938b;
+    background-color: #efdbd8;
+  }
+  100% {
+    transform: translate(30px, -30px) scale(0.9);
+    box-shadow: none;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.moon {
+  background-image: linear-gradient(30deg, #031016, #031016);
+  max-width: 88px;
+  max-height: 88px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 88%;
+}
+.moon::before {
+  content: "";
+  background-color: #c7938b;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  animation: 3.2s cresent linear infinite alternate;
+}
+
+@media (min-width: 320px) and (max-width: 520px) {
+  .moon {
+    margin-left: 75%;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 768px) {
+  .moon {
+    margin-left: 75%;
   }
 }
